@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		57C2AC8D1AEFF2BF0025F7C8 /* IdentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C2AC8C1AEFF2BF0025F7C8 /* IdentViewController.m */; };
+		57C2AC901AEFF96A0025F7C8 /* DwfmsSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C2AC8F1AEFF96A0025F7C8 /* DwfmsSegue.m */; };
 		69757C591AEBBA7D0069A7DA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 69757C581AEBBA7D0069A7DA /* main.m */; };
 		69757C5C1AEBBA7D0069A7DA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 69757C5B1AEBBA7D0069A7DA /* AppDelegate.m */; };
 		69757C5F1AEBBA7D0069A7DA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69757C5E1AEBBA7D0069A7DA /* ViewController.m */; };
@@ -28,6 +30,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		57C2AC8B1AEFF2BF0025F7C8 /* IdentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IdentViewController.h; sourceTree = "<group>"; };
+		57C2AC8C1AEFF2BF0025F7C8 /* IdentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IdentViewController.m; sourceTree = "<group>"; };
+		57C2AC8E1AEFF96A0025F7C8 /* DwfmsSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DwfmsSegue.h; sourceTree = "<group>"; };
+		57C2AC8F1AEFF96A0025F7C8 /* DwfmsSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DwfmsSegue.m; sourceTree = "<group>"; };
 		69757C531AEBBA7D0069A7DA /* TEST_DWFMS_EMG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TEST_DWFMS_EMG.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69757C571AEBBA7D0069A7DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		69757C581AEBBA7D0069A7DA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -94,6 +100,10 @@
 				69757C561AEBBA7D0069A7DA /* Supporting Files */,
 				69E3495C1AED16AE00607997 /* CAllServer.h */,
 				69E3495D1AED16AE00607997 /* CAllServer.m */,
+				57C2AC8B1AEFF2BF0025F7C8 /* IdentViewController.h */,
+				57C2AC8C1AEFF2BF0025F7C8 /* IdentViewController.m */,
+				57C2AC8E1AEFF96A0025F7C8 /* DwfmsSegue.h */,
+				57C2AC8F1AEFF96A0025F7C8 /* DwfmsSegue.m */,
 			);
 			path = TEST_DWFMS_EMG;
 			sourceTree = "<group>";
@@ -225,8 +235,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				69757C5F1AEBBA7D0069A7DA /* ViewController.m in Sources */,
+				57C2AC901AEFF96A0025F7C8 /* DwfmsSegue.m in Sources */,
 				69757C5C1AEBBA7D0069A7DA /* AppDelegate.m in Sources */,
 				69E3495E1AED16AE00607997 /* CAllServer.m in Sources */,
+				57C2AC8D1AEFF2BF0025F7C8 /* IdentViewController.m in Sources */,
 				69757C591AEBBA7D0069A7DA /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
