@@ -10,6 +10,7 @@
 
 @interface ViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UITextField *locatTxt;
 - (IBAction)click:(id)sender;
 - (void)retunData:(NSDictionary*)data;
 @end
