@@ -10,6 +10,7 @@
 
 @interface ViewController : UIViewController
 
-
+- (IBAction)click:(id)sender;
+- (void)retunData:(NSDictionary*)data;
 @end
 
