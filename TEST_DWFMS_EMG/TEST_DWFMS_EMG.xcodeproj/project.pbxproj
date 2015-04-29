@@ -10,6 +10,9 @@
 		57C2AC8D1AEFF2BF0025F7C8 /* IdentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C2AC8C1AEFF2BF0025F7C8 /* IdentViewController.m */; };
 		57C2AC901AEFF96A0025F7C8 /* DwfmsSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C2AC8F1AEFF96A0025F7C8 /* DwfmsSegue.m */; };
 		57D73F431AF14422007F4A39 /* ic_launcher-web.png in Resources */ = {isa = PBXBuildFile; fileRef = 57D73F421AF14422007F4A39 /* ic_launcher-web.png */; };
+		57D73F451AF146DF007F4A39 /* ic_launcher-web.png in Resources */ = {isa = PBXBuildFile; fileRef = 57D73F441AF146DF007F4A39 /* ic_launcher-web.png */; };
+		57D73F471AF14735007F4A39 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 57D73F461AF14735007F4A39 /* Icon.png */; };
+		57D73F491AF14834007F4A39 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 57D73F481AF14834007F4A39 /* Icon.png */; };
 		69757C591AEBBA7D0069A7DA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 69757C581AEBBA7D0069A7DA /* main.m */; };
 		69757C5C1AEBBA7D0069A7DA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 69757C5B1AEBBA7D0069A7DA /* AppDelegate.m */; };
 		69757C5F1AEBBA7D0069A7DA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69757C5E1AEBBA7D0069A7DA /* ViewController.m */; };
@@ -36,6 +39,9 @@
 		57C2AC8E1AEFF96A0025F7C8 /* DwfmsSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DwfmsSegue.h; sourceTree = "<group>"; };
 		57C2AC8F1AEFF96A0025F7C8 /* DwfmsSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DwfmsSegue.m; sourceTree = "<group>"; };
 		57D73F421AF14422007F4A39 /* ic_launcher-web.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_launcher-web.png"; sourceTree = "<group>"; };
+		57D73F441AF146DF007F4A39 /* ic_launcher-web.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_launcher-web.png"; sourceTree = "<group>"; };
+		57D73F461AF14735007F4A39 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		57D73F481AF14834007F4A39 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		69757C531AEBBA7D0069A7DA /* TEST_DWFMS_EMG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TEST_DWFMS_EMG.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69757C571AEBBA7D0069A7DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		69757C581AEBBA7D0069A7DA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -74,6 +80,7 @@
 		57D73F411AF14416007F4A39 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				57D73F481AF14834007F4A39 /* Icon.png */,
 				57D73F421AF14422007F4A39 /* ic_launcher-web.png */,
 			);
 			name = image;
@@ -115,6 +122,8 @@
 				57C2AC8C1AEFF2BF0025F7C8 /* IdentViewController.m */,
 				57C2AC8E1AEFF96A0025F7C8 /* DwfmsSegue.h */,
 				57C2AC8F1AEFF96A0025F7C8 /* DwfmsSegue.m */,
+				57D73F441AF146DF007F4A39 /* ic_launcher-web.png */,
+				57D73F461AF14735007F4A39 /* Icon.png */,
 			);
 			path = TEST_DWFMS_EMG;
 			sourceTree = "<group>";
@@ -226,8 +235,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				69757C621AEBBA7D0069A7DA /* Main.storyboard in Resources */,
+				57D73F471AF14735007F4A39 /* Icon.png in Resources */,
 				69757C671AEBBA7D0069A7DA /* LaunchScreen.xib in Resources */,
 				57D73F431AF14422007F4A39 /* ic_launcher-web.png in Resources */,
+				57D73F451AF146DF007F4A39 /* ic_launcher-web.png in Resources */,
+				57D73F491AF14834007F4A39 /* Icon.png in Resources */,
 				69757C641AEBBA7D0069A7DA /* ic_launcher-web.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -377,6 +389,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = TEST_DWFMS_EMG/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -388,6 +401,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = TEST_DWFMS_EMG/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
