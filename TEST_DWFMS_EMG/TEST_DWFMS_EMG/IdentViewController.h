@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface IdentViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UILabel *infoText;
 @property (weak, nonatomic) IBOutlet UIButton *sendButton;
 @property (weak, nonatomic) IBOutlet UIButton *cancelButton;
 @property (weak, nonatomic) IBOutlet UITextField *phoneText;

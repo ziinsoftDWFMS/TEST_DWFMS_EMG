@@ -109,18 +109,19 @@
 
 
 - (IBAction)click:(id)sender {
+    UIDevice *device = [UIDevice currentDevice];
+    NSString* idForVendor = [device.identifierForVendor UUIDString];
     
-    /*
     CAllServer* res = [CAllServer alloc];
     NSMutableDictionary* param = [[NSMutableDictionary alloc] init];
-    [param setObject:@"gg" forKey:@"gg"];
-    [param setValue:@"01026533" forKey:@"phone"];
-    [param setValue:@"한글" forKey:@"hangle"];
+    [param setObject:@"EV01" forKey:@"code"];
+    [param setObject:idForVendor forKey:@"deviceId"];
+    [param setValue:self.locationTxt.text forKey:@"location"];
     
-    NSString* str = [res stringWithUrl:@"callTest.do" VAL:param];
+    NSString* str = [res stringWithUrl:@"emcInfoPush.do" VAL:param];
     
     NSLog(@" %@",str);
-    //[res test:@"callTest.do"];*/
+    //[res test:@"callTest.do"];
 }
 
 

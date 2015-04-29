@@ -40,17 +40,56 @@
     NSString* str = [res stringWithUrl:@"regEmcAppInstInfo.do" VAL:param];
     
     NSLog(@" %@",str);
+    
+    NSData *jsonData = [str dataUsingEncoding:NSUTF8StringEncoding];
+    NSError *error;
+    NSDictionary *jsonInfo = [NSJSONSerialization JSONObjectWithData:jsonData options:kNilOptions error:&error];
+    NSArray* keys = jsonInfo.allKeys;
+    
+    NSLog(@"keys cont %d",keys.count);
+    
+    NSString * urlParam =@"";
+    for (int i=0; i<keys.count; i++) {
+       
+        
+        if([@"RESULT" isEqual:[keys objectAtIndex:i]])
+        {
+            if([@"SUCCESS" isEqual:[jsonInfo objectForKey:[keys objectAtIndex:i]]])
+            {
+                NSLog(@"key %@  value %@",[keys objectAtIndex:i],[jsonInfo objectForKey:[keys objectAtIndex:i]] );
+
+                
+                [UIView animateWithDuration:0.0 animations:^{
+                    self.view.alpha = 0;
+                } completion:^(BOOL b){
+                    [self.presentingViewController dismissModalViewControllerAnimated:NO];
+                    self.view.alpha = 1;
+                }];
+
+            }
+        }
+        
+        if([@"ERR_MSG" isEqual:[keys objectAtIndex:i]])
+        {
+            self.infoText.text =  [jsonInfo objectForKey:[keys objectAtIndex:i]];
+            
+        }
+    }
+    
+    
     //[res test:@"callTest.do"]
     
 }
 - (IBAction)cancelEvent:(id)sender {
     
+    
+    /*
     [UIView animateWithDuration:0.0 animations:^{
         self.view.alpha = 0;
     } completion:^(BOOL b){
         [self.presentingViewController dismissModalViewControllerAnimated:NO];
         self.view.alpha = 1;
-    }];
+    }];*/
     
 }
 
