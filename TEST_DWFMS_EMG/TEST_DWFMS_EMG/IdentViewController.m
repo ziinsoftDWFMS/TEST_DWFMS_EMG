@@ -82,7 +82,7 @@
 }
 - (IBAction)cancelEvent:(id)sender {
     
-    
+    exit(0);
     /*
     [UIView animateWithDuration:0.0 animations:^{
         self.view.alpha = 0;
