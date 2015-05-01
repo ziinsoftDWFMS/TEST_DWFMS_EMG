@@ -94,6 +94,7 @@
 				69757C541AEBBA7D0069A7DA /* Products */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 0;
 		};
 		69757C541AEBBA7D0069A7DA /* Products */ = {
 			isa = PBXGroup;

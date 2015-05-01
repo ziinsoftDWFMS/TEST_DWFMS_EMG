@@ -9,7 +9,7 @@
 #import "IdentViewController.h"
 #import "CAllServer.h"
 @interface IdentViewController ()
-
+// create by kys 2015.5.1
 @end
 
 @implementation IdentViewController
