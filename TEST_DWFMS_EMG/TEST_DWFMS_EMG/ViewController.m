@@ -120,7 +120,7 @@
     
     NSString* str = [res stringWithUrl:@"emcInfoPush.do" VAL:param];
     
-    NSLog(@" %@",str);
+    NSLog(@" %@",str); 
     //[res test:@"callTest.do"];
 }
 
