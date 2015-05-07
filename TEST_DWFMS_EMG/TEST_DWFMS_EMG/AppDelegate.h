@@ -7,8 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "WebviewController.h"
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
+{
+    NSString *deviceToken;
+    WebviewController *viewController;
+    UINavigationController* _navigationController;
+}
+@property (nonatomic, strong) NSString *deviceToken;
 
 @property (strong, nonatomic) UIWindow *window;
 

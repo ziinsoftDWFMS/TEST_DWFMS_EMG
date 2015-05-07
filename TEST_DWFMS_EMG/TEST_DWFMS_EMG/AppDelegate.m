@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "WebviewController.h"
 
 @interface AppDelegate ()
 
@@ -17,14 +18,134 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [[UIApplication sharedApplication] registerForRemoteNotificationTypes:
-     (UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound | UIRemoteNotificationTypeAlert)];
+    
+    if ([application respondsToSelector:@selector(registerUserNotificationSettings:)]) {
+        UIUserNotificationSettings* notificationSettings = [UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert | UIUserNotificationTypeBadge | UIUserNotificationTypeSound categories:nil];
+        [[UIApplication sharedApplication] registerUserNotificationSettings:notificationSettings];
+        [[UIApplication sharedApplication] registerForRemoteNotifications];
+        NSLog(@"%@",@"등록완료1");
+    } else {
+        [[UIApplication sharedApplication] registerForRemoteNotificationTypes: (UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound | UIRemoteNotificationTypeAlert)];
+        NSLog(@"%@",@"등록완료2");
+    }
+    
+    if(launchOptions)
+    {
+        application.applicationIconBadgeNumber = 0;
+        
+        NSDictionary *launchDictionary = [launchOptions objectForKey:UIApplicationLaunchOptionsRemoteNotificationKey ];
+        NSDictionary *apsDictionary = [launchDictionary valueForKey:@"aps"];
+        NSString *message = (NSString *)[apsDictionary valueForKey:(id)@"alert"];
+        
+        NSString *CONF_MSG            = [launchDictionary valueForKey:@"CONF_MSG"];
+        //    NSString *CODE            = [userInfo valueForKey:@"EMC_ID"];
+        //    NSString *EMC_ID           = [userInfo valueForKey:@"EMC_MSG"];
+        //    NSString *CODE              = [userInfo valueForKey:@"CODE"];
+//        NSString *message           = (NSString *)[apsDictionary valueForKey:(id)@"alert"];
+        //    NSLog(@"GRP_CD: %@",    GRP_CD);
+        //    NSLog(@"EMC_ID: %@",    EMC_ID);
+        //    NSLog(@"EMC_MSG: %@",   EMC_MSG);
+        NSLog(@"message: %@",      message);
+        
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil
+                                                        message:CONF_MSG delegate:self
+                                              cancelButtonTitle:@"취소"
+                                              otherButtonTitles:@"확인", nil];
+        [alert show];
+
+
+        
+    }
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+
+
     return YES;
+}
+- (void)application:(UIApplication *)application
+didReceiveRemoteNotification:(NSDictionary *)userInfo
+{
+    application.applicationIconBadgeNumber = 0;
+    NSDictionary *apsDictionary = [userInfo valueForKey:@"aps"];
+    NSString *CONF_MSG            = [userInfo valueForKey:@"CONF_MSG"];
+//    NSString *CODE            = [userInfo valueForKey:@"EMC_ID"];
+//    NSString *EMC_ID           = [userInfo valueForKey:@"EMC_MSG"];
+//    NSString *CODE              = [userInfo valueForKey:@"CODE"];
+    NSString *message           = (NSString *)[apsDictionary valueForKey:(id)@"alert"];
+//    NSLog(@"GRP_CD: %@",    GRP_CD);
+//    NSLog(@"EMC_ID: %@",    EMC_ID);
+//    NSLog(@"EMC_MSG: %@",   EMC_MSG);
+    NSLog(@"message: %@",      message);
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil
+                                                    message:CONF_MSG delegate:self
+                                          cancelButtonTitle:@"취소"
+                                          otherButtonTitles:@"확인", nil];
+    [alert show];
+    
+    /*
+     if(application.applicationState == UIApplicationStateActive){
+     NSDictionary *apsDictionary = [userInfo valueForKey:@"aps"];
+     NSString *message = (NSString *)[apsDictionary valueForKey:(id)@"alert"];
+     NSLog(@"message: %@", message);
+     
+     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil
+     message:message delegate:self
+     cancelButtonTitle:@"확인"
+     otherButtonTitles:@"전화걸기", nil];
+     
+     [alert show];
+     
+     }else if(application.applicationState == UIApplicationStateInactive){
+     
+     NSDictionary *apsDictionary = [userInfo valueForKey:@"aps"];
+     NSString *message = (NSString *)[apsDictionary valueForKey:(id)@"alert"];
+     NSLog(@"message: %@", message);
+     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil
+     message:message delegate:self
+     cancelButtonTitle:@"취소"
+     otherButtonTitles:@"전화걸기", nil];
+     [alert show];
+     //전화걸기
+     
+     }else{
+     
+     NSDictionary *apsDictionary = [userInfo valueForKey:@"aps"];
+     NSString *message = (NSString *)[apsDictionary valueForKey:(id)@"alert"];
+     NSLog(@"message: %@", message);
+     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil
+     message:message delegate:self
+     cancelButtonTitle:@"취소"
+     otherButtonTitles:@"전화걸기", nil];
+     [alert show];
+     
+     NSLog(@"message: %@", @"fail state");
+     
+     }*/
+    NSInteger applicationIconBadgeNumber = [application applicationIconBadgeNumber];
+    
+    [application setApplicationIconBadgeNumber:applicationIconBadgeNumber];
+    [[UIApplication sharedApplication] cancelAllLocalNotifications];
 }
 
 - (void)application:(UIApplication*)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData*)deviceToken
 {
     NSLog(@"My token is: %@", deviceToken);
+    NSMutableString *deviceId = [NSMutableString string];
+    const unsigned char* ptr = (const unsigned char*) [deviceToken bytes];
+    
+    for(int i = 0 ; i < 32 ; i++)
+    {
+        [deviceId appendFormat:@"%02x", ptr[i]];
+    }
+    
+    NSLog(@"APNS Device Token: %@", deviceId);
+    // deviceTok = deviceId;
+    
+    AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    app.deviceToken = deviceId;
+    
+    NSLog(@"APNS Device Tok: %@", app.deviceToken);
 }
 
 - (void)application:(UIApplication*)application didFailToRegisterForRemoteNotificationsWithError:(NSError*)error

@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface WebviewController : UIViewController
-@property (nonatomic, strong) IBOutlet UIWebView *site;
 
+@property (weak, nonatomic) IBOutlet UIWebView *site;
 
 @end

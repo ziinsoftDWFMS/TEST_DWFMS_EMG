@@ -21,7 +21,9 @@
     
     NSLog(@">>>>>%@",idForVendor);
     
-    NSString *serverUrl = [NSString stringWithFormat:@"http://211.253.9.3:8080/deviceId=%@",idForVendor] ;
+//    NSString *serverUrl = [NSString stringWithFormat:@"http://211.253.9.3:8080/deviceId=%@",idForVendor] ;
+    NSString *serverUrl = [NSString stringWithFormat:@"http://www.naver.com"] ;
+
 
     NSURL *url=[NSURL URLWithString:serverUrl];    
     NSURLRequest *requestURL=[NSURLRequest requestWithURL:url];

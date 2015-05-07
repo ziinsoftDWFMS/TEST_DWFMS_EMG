@@ -8,6 +8,8 @@
 
 #import "IdentViewController.h"
 #import "CAllServer.h"
+#import "AppDelegate.h"
+
 @interface IdentViewController ()
 
 @end
@@ -29,15 +31,18 @@
     UIDevice *device = [UIDevice currentDevice];
     NSString* idForVendor = [device.identifierForVendor UUIDString];
     
-    NSLog(@">>>>>%@",idForVendor);
+    NSLog(@">>>>id>%@",idForVendor);
+    AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     
+    NSLog(@">>>deviceToken>>%@",app.deviceToken);
+
     CAllServer* res = [CAllServer alloc];
     NSMutableDictionary* param = [[NSMutableDictionary alloc] init];
     [param setObject:phone forKey:@"hp"];
     [param setObject:idForVendor forKey:@"deviceId"];
     [param setValue:@"S" forKey:@"gubun"];
     [param setValue:@"EV01" forKey:@"code"];
-    [param setValue:@"abcdefxxxzz" forKey:@"gcm_id"];
+    [param setValue:app.deviceToken forKey:@"gcm_id"];
     NSString* str = [res stringWithUrl:@"regEmcAppInstInfo.do" VAL:param];
     
     NSLog(@" %@",str);

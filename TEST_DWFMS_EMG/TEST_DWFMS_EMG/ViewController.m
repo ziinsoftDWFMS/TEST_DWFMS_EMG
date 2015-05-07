@@ -52,7 +52,7 @@
     
     
     
-    if([str  isEqual: @"{}"]){
+    if([str isEqual: @"{}"]){
         
         
         
@@ -91,8 +91,7 @@
         
     }else{
         
-        
-        
+
         
         
         NSLog(@">>4566>>>1234%@",idForVendor);
