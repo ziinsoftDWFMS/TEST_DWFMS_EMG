@@ -18,6 +18,15 @@
 		69757C671AEBBA7D0069A7DA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69757C651AEBBA7D0069A7DA /* LaunchScreen.xib */; };
 		69757C731AEBBA7D0069A7DA /* TEST_DWFMS_EMGTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69757C721AEBBA7D0069A7DA /* TEST_DWFMS_EMGTests.m */; };
 		69E3495E1AED16AE00607997 /* CAllServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E3495D1AED16AE00607997 /* CAllServer.m */; };
+		BAFA2F5B1AFB4B41007BEFB3 /* ic_backout3.png in Resources */ = {isa = PBXBuildFile; fileRef = BAFA2F531AFB4B41007BEFB3 /* ic_backout3.png */; };
+		BAFA2F5C1AFB4B41007BEFB3 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = BAFA2F541AFB4B41007BEFB3 /* Icon.png */; };
+		BAFA2F5D1AFB4B41007BEFB3 /* ic_emergency.png in Resources */ = {isa = PBXBuildFile; fileRef = BAFA2F551AFB4B41007BEFB3 /* ic_emergency.png */; };
+		BAFA2F5E1AFB4B41007BEFB3 /* ic_fire3.png in Resources */ = {isa = PBXBuildFile; fileRef = BAFA2F561AFB4B41007BEFB3 /* ic_fire3.png */; };
+		BAFA2F5F1AFB4B41007BEFB3 /* ic_gas3.png in Resources */ = {isa = PBXBuildFile; fileRef = BAFA2F571AFB4B41007BEFB3 /* ic_gas3.png */; };
+		BAFA2F601AFB4B41007BEFB3 /* ic_launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = BAFA2F581AFB4B41007BEFB3 /* ic_launcher.png */; };
+		BAFA2F611AFB4B41007BEFB3 /* ic_safely_accid.png in Resources */ = {isa = PBXBuildFile; fileRef = BAFA2F591AFB4B41007BEFB3 /* ic_safely_accid.png */; };
+		BAFA2F621AFB4B41007BEFB3 /* ic_water.png in Resources */ = {isa = PBXBuildFile; fileRef = BAFA2F5A1AFB4B41007BEFB3 /* ic_water.png */; };
+		BAFA2F651AFB4D8E007BEFB3 /* WebviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFA2F641AFB4D8E007BEFB3 /* WebviewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +60,16 @@
 		69757C721AEBBA7D0069A7DA /* TEST_DWFMS_EMGTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TEST_DWFMS_EMGTests.m; sourceTree = "<group>"; };
 		69E3495C1AED16AE00607997 /* CAllServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAllServer.h; sourceTree = "<group>"; };
 		69E3495D1AED16AE00607997 /* CAllServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAllServer.m; sourceTree = "<group>"; };
+		BAFA2F531AFB4B41007BEFB3 /* ic_backout3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_backout3.png; sourceTree = "<group>"; };
+		BAFA2F541AFB4B41007BEFB3 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		BAFA2F551AFB4B41007BEFB3 /* ic_emergency.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_emergency.png; sourceTree = "<group>"; };
+		BAFA2F561AFB4B41007BEFB3 /* ic_fire3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_fire3.png; sourceTree = "<group>"; };
+		BAFA2F571AFB4B41007BEFB3 /* ic_gas3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_gas3.png; sourceTree = "<group>"; };
+		BAFA2F581AFB4B41007BEFB3 /* ic_launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_launcher.png; sourceTree = "<group>"; };
+		BAFA2F591AFB4B41007BEFB3 /* ic_safely_accid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_safely_accid.png; sourceTree = "<group>"; };
+		BAFA2F5A1AFB4B41007BEFB3 /* ic_water.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_water.png; sourceTree = "<group>"; };
+		BAFA2F631AFB4D6B007BEFB3 /* WebviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebviewController.h; sourceTree = "<group>"; };
+		BAFA2F641AFB4D8E007BEFB3 /* WebviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebviewController.m; path = ../WebviewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +93,14 @@
 		57D73F411AF14416007F4A39 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				BAFA2F531AFB4B41007BEFB3 /* ic_backout3.png */,
+				BAFA2F541AFB4B41007BEFB3 /* Icon.png */,
+				BAFA2F551AFB4B41007BEFB3 /* ic_emergency.png */,
+				BAFA2F561AFB4B41007BEFB3 /* ic_fire3.png */,
+				BAFA2F571AFB4B41007BEFB3 /* ic_gas3.png */,
+				BAFA2F581AFB4B41007BEFB3 /* ic_launcher.png */,
+				BAFA2F591AFB4B41007BEFB3 /* ic_safely_accid.png */,
+				BAFA2F5A1AFB4B41007BEFB3 /* ic_water.png */,
 				57D73F421AF14422007F4A39 /* ic_launcher-web.png */,
 			);
 			name = image;
@@ -115,6 +142,8 @@
 				57C2AC8C1AEFF2BF0025F7C8 /* IdentViewController.m */,
 				57C2AC8E1AEFF96A0025F7C8 /* DwfmsSegue.h */,
 				57C2AC8F1AEFF96A0025F7C8 /* DwfmsSegue.m */,
+				BAFA2F631AFB4D6B007BEFB3 /* WebviewController.h */,
+				BAFA2F641AFB4D8E007BEFB3 /* WebviewController.m */,
 			);
 			path = TEST_DWFMS_EMG;
 			sourceTree = "<group>";
@@ -226,9 +255,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				69757C621AEBBA7D0069A7DA /* Main.storyboard in Resources */,
+				BAFA2F621AFB4B41007BEFB3 /* ic_water.png in Resources */,
 				69757C671AEBBA7D0069A7DA /* LaunchScreen.xib in Resources */,
+				BAFA2F5D1AFB4B41007BEFB3 /* ic_emergency.png in Resources */,
+				BAFA2F5F1AFB4B41007BEFB3 /* ic_gas3.png in Resources */,
+				BAFA2F5E1AFB4B41007BEFB3 /* ic_fire3.png in Resources */,
+				BAFA2F611AFB4B41007BEFB3 /* ic_safely_accid.png in Resources */,
+				BAFA2F5B1AFB4B41007BEFB3 /* ic_backout3.png in Resources */,
+				BAFA2F5C1AFB4B41007BEFB3 /* Icon.png in Resources */,
 				57D73F431AF14422007F4A39 /* ic_launcher-web.png in Resources */,
 				69757C641AEBBA7D0069A7DA /* ic_launcher-web.png in Resources */,
+				BAFA2F601AFB4B41007BEFB3 /* ic_launcher.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,6 +288,7 @@
 				69757C5C1AEBBA7D0069A7DA /* AppDelegate.m in Sources */,
 				69E3495E1AED16AE00607997 /* CAllServer.m in Sources */,
 				57C2AC8D1AEFF2BF0025F7C8 /* IdentViewController.m in Sources */,
+				BAFA2F651AFB4D8E007BEFB3 /* WebviewController.m in Sources */,
 				69757C591AEBBA7D0069A7DA /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -377,6 +415,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = TEST_DWFMS_EMG/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -388,6 +427,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = TEST_DWFMS_EMG/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
